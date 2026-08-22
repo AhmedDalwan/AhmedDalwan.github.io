@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmed Dalwan - .NET Backend Developer Portfolio">
+    <title>Ahmed Dalwan | Backend Developer</title>
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="assets/logo.jpg" alt="Ahmed DN Logo">
+                <span class="logo-text">Ahmed DN</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-ar="عني">About</a></li>
+                <li><a href="#skills" class="nav-link" data-en="Skills" data-ar="المهارات">Skills</a></li>
+                <li><a href="#services" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+                <li><a href="#education" class="nav-link" data-en="Education" data-ar="التعليم">Education</a></li>
+                <li><a href="#reviews" class="nav-link" data-en="Reviews" data-ar="التقييمات">Reviews</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="تواصل">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="lang-toggle" id="langToggle" aria-label="Toggle Language">
+                    <span class="lang-current">EN</span>
+                    <span class="lang-divider">/</span>
+                    <span class="lang-other">عر</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-greeting" data-en="Welcome to my portfolio, I'm" data-ar="أهلاً بكم في ملفي الشخصي، معكم">Welcome to my portfolio, I'm</span>
+                    <span class="hero-name">Ahmed <span class="accent">Dalwan</span></span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-bracket">&lt;</span>
+                    <span class="role-fixed" data-en="Backend Developer" data-ar="مطور Backend">Backend Developer</span>
+                    <span class="role-bracket">/&gt;</span>
+                </div>
+                <p class="hero-description" data-en="I build fast, reliable backend systems with .NET — clean APIs, solid databases, and code that just works." data-ar="أبني أنظمة Backend سريعة وموثوقة باستخدام .NET — واجهات API نظيفة، وقواعد بيانات متينة، وكود يعمل بكفاءة.">
+                    I build fast, reliable backend systems with .NET.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <span data-en="Get in Touch" data-ar="تواصل معي">Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <span data-en="My Services" data-ar="خدماتي">My Services</span>
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Threads"><i class="fab fa-threads"></i></a>
+                    <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-frame">
+                    <div class="frame-decoration frame-tl"></div>
+                    <div class="frame-decoration frame-tr"></div>
+                    <div class="frame-decoration frame-bl"></div>
+                    <div class="frame-decoration frame-br"></div>
+                    <div class="profile-img-wrapper">
+                        <img src="assets/profile.jpg" alt="Ahmed Dalwan" class="profile-img">
+                        <div class="profile-glow"></div>
+                    </div>
+                    <div class="floating-tech tech-1"><i class="fas fa-server"></i></div>
+                    <div class="floating-tech tech-2"><i class="fas fa-database"></i></div>
+                    <div class="floating-tech tech-3"><i class="fas fa-code-branch"></i></div>
+                    <div class="floating-tech tech-4"><i class="fas fa-bolt"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-en="Scroll" data-ar="انزل">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-heading" data-en="Building the Engine Behind Great Software" data-ar="أبني المحرّك الذي يقف خلف البرمجيات الرائعة">
+                        Building the Engine Behind Great Software
+                    </h3>
+                    <p data-en="I'm a Backend Developer based in Damascus, Syria, focused on building the systems that power real applications — the part users never see, but always feel." data-ar="أنا مطور Backend مقيم في دمشق، سوريا، أركّز على بناء الأنظمة التي تُشغّل التطبيقات الحقيقية — الجزء الذي لا يراه المستخدم، لكنه يشعر به دائماً.">
+                        I'm a Backend Developer based in Damascus, Syria.
+                    </p>
+                    <ul class="about-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span data-en="4+ years building with ASP.NET Core & C#" data-ar="أكثر من 4 سنوات في البناء باستخدام ASP.NET Core و C#">4+ years building with ASP.NET Core & C#</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span data-en="Specialized in fast, well-structured RESTful APIs" data-ar="متخصص في بناء واجهات RESTful API سريعة ومنظّمة">Specialized in fast, well-structured RESTful APIs</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span data-en="Strong database design skills (SQL Server, MySQL, Oracle)" data-ar="مهارات قوية في تصميم قواعد البيانات (SQL Server, MySQL, Oracle)">Strong database design skills (SQL Server, MySQL, Oracle)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span data-en="Cross-platform experience: .NET MAUI, Angular, Windows Desktop" data-ar="خبرة متعددة المنصات: .NET MAUI و Angular وتطبيقات سطح المكتب">Cross-platform experience: .NET MAUI, Angular, Windows Desktop</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span data-en="Focused on clean code and solving complex, unclear problems" data-ar="أركّز على الكود النظيف وحل المشكلات المعقّدة وغير الواضحة">Focused on clean code and solving complex, unclear problems</span>
+                        </li>
+                    </ul>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label" data-en="Location" data-ar="الموقع">Location</span>
+                                <span class="info-value" data-en="Damascus, Syria" data-ar="دمشق، سوريا">Damascus, Syria</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="info-label" data-en="Current Education" data-ar="التعليم الحالي">Current Education</span>
+                                <span class="info-value" data-en="BAIT - SVU" data-ar="BAIT - الجامعة الافتراضية">BAIT - SVU</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span class="info-label" data-en="Languages" data-ar="اللغات">Languages</span>
+                                <span class="info-value" data-en="Arabic, English" data-ar="العربية، الإنجليزية">Arabic, English</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-label" data-en="Experience" data-ar="الخبرة">Experience</span>
+                                <span class="info-value" data-en="4+ Years" data-ar="+4 سنوات">4+ Years</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">
+                        <span data-en="Download CV" data-ar="تحميل السيرة">Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+                            <span class="window-title">developer.cs</span>
+                        </div>
+                        <div class="code-body">
+<pre><code><span class="code-keyword">public class</span> <span class="code-class">Developer</span>
+{
+    <span class="code-keyword">public string</span> Name => <span class="code-string">"Ahmed Dalwan"</span>;
+    <span class="code-keyword">public string</span> Role => <span class="code-string">"Backend Developer"</span>;
+    <span class="code-keyword">public int</span> Experience => <span class="code-number">4</span>;
+    
+    <span class="code-keyword">public</span> List&lt;<span class="code-keyword">string</span>&gt; CoreSkills => <span class="code-keyword">new</span>()
+    {
+        <span class="code-string">"ASP.NET Core / C#"</span>,
+        <span class="code-string">"RESTful APIs"</span>,
+        <span class="code-string">"SQL Server / MySQL / Oracle"</span>,
+        <span class="code-string">"Clean Architecture"</span>,
+        <span class="code-string">"Problem Solving"</span>
+    };
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title" data-en="Tech Stack" data-ar="المهارات التقنية">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category-block">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        <span data-en="Backend Development" data-ar="تطوير الخادم">Backend Development</span>
+                    </h3>
+                    <div class="skills-tiles">
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fab fa-microsoft"></i></div>
+                            <span class="tile-name">ASP.NET Core MVC</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-hashtag"></i></div>
+                            <span class="tile-name">C# / VB.NET</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-network-wired"></i></div>
+                            <span class="tile-name">RESTful APIs</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-cubes"></i></div>
+                            <span class="tile-name">Entity Framework Core</span>
+                        </div>
+                        <div class="skill-tile featured-tile">
+                            <div class="tile-icon"><i class="fas fa-broom"></i></div>
+                            <span class="tile-name" data-en="Clean Code" data-ar="كود نظيف">Clean Code</span>
+                        </div>
+                        <div class="skill-tile featured-tile">
+                            <div class="tile-icon"><i class="fas fa-sitemap"></i></div>
+                            <span class="tile-name" data-en="Clean Architecture" data-ar="بنية نظيفة">Clean Architecture</span>
+                        </div>
+                        <div class="skill-tile featured-tile">
+                            <div class="tile-icon"><i class="fas fa-puzzle-piece"></i></div>
+                            <span class="tile-name" data-en="Problem Solving" data-ar="حل المشكلات">Problem Solving</span>
+                            <span class="tile-badge" data-en="Specialty" data-ar="اختصاص">Specialty</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-block">
+                    <h3 class="category-title">
+                        <i class="fas fa-paint-brush"></i>
+                        <span data-en="Frontend Development" data-ar="تطوير الواجهات">Frontend Development</span>
+                    </h3>
+                    <div class="skills-tiles">
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fab fa-angular"></i></div>
+                            <span class="tile-name">Angular</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fab fa-bootstrap"></i></div>
+                            <span class="tile-name">Bootstrap 5</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fab fa-js"></i></div>
+                            <span class="tile-name">JavaScript / jQuery</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fab fa-html5"></i></div>
+                            <span class="tile-name">HTML5 / CSS3 / Ajax</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-block">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i>
+                        <span data-en="Database & Tools" data-ar="قواعد البيانات والأدوات">Database & Tools</span>
+                    </h3>
+                    <div class="skills-tiles">
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-database"></i></div>
+                            <span class="tile-name">SQL Server</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-database"></i></div>
+                            <span class="tile-name">MySQL</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-database"></i></div>
+                            <span class="tile-name">Oracle</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fab fa-git-alt"></i></div>
+                            <span class="tile-name">Git / GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-block">
+                    <h3 class="category-title">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span data-en="Desktop & Mobile" data-ar="سطح المكتب والموبايل">Desktop & Mobile</span>
+                    </h3>
+                    <div class="skills-tiles">
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fab fa-windows"></i></div>
+                            <span class="tile-name">Windows Forms</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-desktop"></i></div>
+                            <span class="tile-name">WPF</span>
+                        </div>
+                        <div class="skill-tile featured-tile">
+                            <div class="tile-icon"><i class="fas fa-mobile-screen"></i></div>
+                            <span class="tile-name">.NET MAUI</span>
+                            <span class="tile-badge">New</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-block">
+                    <h3 class="category-title">
+                        <i class="fas fa-cloud"></i>
+                        <span data-en="Cloud & Hosting" data-ar="السحابة والاستضافة">Cloud & Hosting</span>
+                    </h3>
+                    <div class="skills-tiles">
+                        <div class="skill-tile featured-tile">
+                            <div class="tile-icon"><i class="fas fa-cloud"></i></div>
+                            <span class="tile-name">Microsoft Azure</span>
+                            <span class="tile-badge">New</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-server"></i></div>
+                            <span class="tile-name">IIS Hosting</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-shield-halved"></i></div>
+                            <span class="tile-name">JWT Auth</span>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="tile-icon"><i class="fas fa-bolt"></i></div>
+                            <span class="tile-name">SignalR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title" data-en="What I Can Build For You" data-ar="ما الذي أستطيع بناءه لك">What I Can Build For You</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="services-intro" data-en="\"Complete\" means end-to-end: I take a ready design template and implement it fully — frontend, backend, and database." data-ar="كلمة \"متكامل\" تعني: أستلم قالب تصميم جاهز وأقوم بتنفيذه بالكامل — واجهة أمامية وخلفية وقاعدة بيانات.">
+                "Complete" means end-to-end delivery — frontend, backend, and database.
+            </p>
+            <div class="services-grid">
+
+                <article class="service-card service-priority">
+                    <span class="service-priority-badge" data-en="My Specialty" data-ar="اختصاصي">My Specialty</span>
+                    <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                    <h3 class="service-title" data-en="Fast & Reliable APIs" data-ar="واجهات API قوية وسريعة">Fast & Reliable APIs</h3>
+                    <p class="service-description" data-en="I build powerful, fast, and easy-to-use APIs with clean code and advanced techniques — suited even for heavy apps and games that need instant response with zero waiting." data-ar="أبني واجهات API قوية وسريعة وسهلة الاستخدام بكود نظيف وتقنيات متقدمة — تناسب حتى البرامج والألعاب الثقيلة التي تحتاج استجابة فورية بدون أي انتظار للمستخدم.">
+                        Powerful, fast APIs with clean code — built for instant response, even in heavy apps.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-gauge-high"></i></div>
+                    <h3 class="service-title" data-en="Complete Admin Dashboard" data-ar="لوحة تحكم متكاملة">Complete Admin Dashboard</h3>
+                    <p class="service-description" data-en="A fully functional admin dashboard — I take your design and build it into a complete, working system with frontend, backend, and database." data-ar="لوحة تحكم متكاملة وجاهزة للعمل — أستلم التصميم الخاص بك وأحوّله إلى نظام كامل يعمل بواجهة أمامية وخلفية وقاعدة بيانات.">
+                        A fully functional dashboard, built end-to-end from your design.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                    <h3 class="service-title" data-en="Complete Mobile App" data-ar="تطبيق موبايل متكامل">Complete Mobile App</h3>
+                    <p class="service-description" data-en="Full mobile application development from a ready design — covering the app itself, the backend API, and the database behind it." data-ar="تطوير تطبيق موبايل متكامل انطلاقاً من تصميم جاهز — يشمل التطبيق نفسه، وواجهة API الخلفية، وقاعدة البيانات وراءه.">
+                        Full mobile app development — app, backend API, and database.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h3 class="service-title" data-en="Database Study & Redesign" data-ar="دراسة وإعادة تصميم قاعدة البيانات">Database Study & Redesign</h3>
+                    <p class="service-description" data-en="I study your existing database from scratch and redesign it to be simpler, faster, and easier to work with." data-ar="أدرس قاعدة بياناتك الحالية من جديد وأعيد تصميمها لتصبح أبسط وأسرع وأسهل في التعامل معها.">
+                        Rebuilding your database to be simpler, faster, and easier to work with.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                    <h3 class="service-title" data-en="Complete Desktop Software" data-ar="برامج سطح مكتب متكاملة">Complete Desktop Software</h3>
+                    <p class="service-description" data-en="Full desktop applications for Windows, whether they need to work online (connected to a server/API) or fully offline." data-ar="برامج سطح مكتب متكاملة تعمل على ويندوز، سواء كانت تحتاج للعمل أونلاين (متصلة بخادم/API) أو بشكل كامل أوفلاين.">
+                        Full Windows desktop apps — online (connected) or fully offline.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title" data-en="Education" data-ar="التعليم">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-en="Current Education" data-ar="التعليم الحالي">Current Education</span>
+                        <h3 class="timeline-title" data-en="Information Technology" data-ar="تكنولوجيا المعلومات">Information Technology</h3>
+                        <h4 class="timeline-subtitle" data-en="Syrian Virtual University (BAIT)" data-ar="الجامعة الافتراضية السورية (BAIT)">Syrian Virtual University (BAIT)</h4>
+                        <p data-en="Pursuing Bachelor's degree in Information Technology with focus on software engineering and modern development practices." data-ar="أتابع درجة البكالوريوس في تكنولوجيا المعلومات مع التركيز على هندسة البرمجيات وممارسات التطوير الحديثة.">
+                            Pursuing Bachelor's degree with focus on software engineering.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-certificate"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 - 2022</span>
+                        <h3 class="timeline-title" data-en="Diploma in Software Engineering" data-ar="دبلوم هندسة البرمجيات">Diploma in Software Engineering</h3>
+                        <h4 class="timeline-subtitle" data-en="Technical Institute Computer (TIC)" data-ar="المعهد التقني للحاسوب (TIC)">Technical Institute Computer (TIC)</h4>
+                        <p data-en="Graduated with comprehensive training in programming fundamentals, data structures, algorithms, and software development methodologies." data-ar="تخرجت بتدريب شامل في أساسيات البرمجة وهياكل البيانات والخوارزميات ومنهجيات تطوير البرمجيات.">
+                            Comprehensive training in programming and software development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online Courses -->
+            <div class="online-courses">
+                <h3 class="online-courses-heading">
+                    <i class="fab fa-youtube"></i>
+                    <span data-en="Online Courses I've Studied" data-ar="دورات أونلاين درستها بشكل مدروس">Online Courses I've Studied</span>
+                </h3>
+                <div class="courses-list">
+                    <a href="#" class="course-item">
+                        <div class="course-icon"><i class="fab fa-youtube"></i></div>
+                        <span class="course-name" data-en="C# Fundamentals" data-ar="تعلم الأساسيات C#">C# Fundamentals</span>
+                        <i class="fas fa-arrow-up-right-from-square course-arrow"></i>
+                    </a>
+                    <a href="#" class="course-item">
+                        <div class="course-icon"><i class="fab fa-youtube"></i></div>
+                        <span class="course-name" data-en="ASP.NET MVC with SQL Server" data-ar="تعلم ASP.NET MVC مع الربط بقاعدة بيانات SQL Server">ASP.NET MVC with SQL Server</span>
+                        <i class="fas fa-arrow-up-right-from-square course-arrow"></i>
+                    </a>
+                    <a href="#" class="course-item">
+                        <div class="course-icon"><i class="fab fa-youtube"></i></div>
+                        <span class="course-name" data-en="Angular with ASP.NET Web API & SQL Server" data-ar="تعلم تصميم Angular مع الربط بـ ASP.NET Web API وقاعدة بيانات SQL Server">Angular with ASP.NET Web API & SQL Server</span>
+                        <i class="fas fa-arrow-up-right-from-square course-arrow"></i>
+                    </a>
+                    <a href="#" class="course-item">
+                        <div class="course-icon"><i class="fab fa-youtube"></i></div>
+                        <span class="course-name" data-en="Oracle Database — SQL Statements Basics" data-ar="تعلم قاعدة بيانات Oracle — أساسيات SQL Statements">Oracle Database — SQL Statements Basics</span>
+                        <i class="fas fa-arrow-up-right-from-square course-arrow"></i>
+                    </a>
+                    <a href="#" class="course-item">
+                        <div class="course-icon"><i class="fab fa-youtube"></i></div>
+                        <span class="course-name" data-en="Oracle Database Programming — PL/SQL" data-ar="تعلم برمجة قاعدة بيانات Oracle — PL/SQL">Oracle Database Programming — PL/SQL</span>
+                        <i class="fas fa-arrow-up-right-from-square course-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title" data-en="Client Reviews" data-ar="آراء العملاء">Client Reviews</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="reviews-intro" data-en="Honest feedback from clients I've worked with on Mostaql and Khamsat — every review is 5 stars." data-ar="آراء صادقة من عملاء عملت معهم على منصتي مستقل وخمسات — كل التقييمات 5 نجوم.">
+                Honest feedback from clients on Mostaql and Khamsat.
+            </p>
+        </div>
+
+        <div class="reviews-marquee-wrapper">
+            <div class="reviews-marquee">
+                <!-- Track 1 -->
+                <div class="reviews-track">
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box khamsat-box">
+                                <span>5</span>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">عمل احترافي ومتقن، التزم بالتسليم في الموعد وتجاوز توقعاتي. أنصح بالتعامل معه بشدة.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">م</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">محمد العلي</span>
+                                <span class="reviewer-project">مشروع موقع ويب</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box mostaql-box">
+                                <i class="fas fa-m"></i>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">مطور محترف وخلوق، فهم متطلباتي بسرعة ونفذها بإتقان. كود نظيف وتوثيق ممتاز.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">أ</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">أحمد الشامي</span>
+                                <span class="reviewer-project">نظام إدارة فواتير</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box khamsat-box">
+                                <span>5</span>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">سرعة في الإنجاز وجودة عالية في التنفيذ. تواصل ممتاز طوال فترة العمل. شكراً جزيلاً.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">خ</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">خالد الحموي</span>
+                                <span class="reviewer-project">قاعدة بيانات SQL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box mostaql-box">
+                                <i class="fas fa-m"></i>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">من أفضل المطورين الذين تعاملت معهم. التزام كامل بالمتطلبات ودعم بعد التسليم. أنصح به.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">ع</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">عمر الدمشقي</span>
+                                <span class="reviewer-project">تطبيق سطح مكتب</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box khamsat-box">
+                                <span>5</span>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">عمل مميز جداً، فهم الفكرة من أول مرة وقدّم حلولاً مبتكرة. سأعود للتعامل معه مرة أخرى.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">س</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">سامر الحلبي</span>
+                                <span class="reviewer-project">واجهة برمجية API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box mostaql-box">
+                                <i class="fas fa-m"></i>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">احترافية عالية ودقة في التنفيذ. التعاون معه كان سهلاً جداً وأنصح بالتعامل معه دون تردد.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">ف</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">فادي القنواتي</span>
+                                <span class="reviewer-project">تطبيق موبايل MAUI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box khamsat-box">
+                                <span>5</span>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">أنصح بالتعامل معه، صبور ومتفهم للمتطلبات حتى أدق التفاصيل. النتيجة فاقت توقعاتي.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">ب</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">باسل الإدلبي</span>
+                                <span class="reviewer-project">نظام إدارة مخزون</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box mostaql-box">
+                                <i class="fas fa-m"></i>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">تجربة رائعة، تواصل ممتاز ودعم فني بعد التسليم. الكود نظيف ومنظم بشكل احترافي.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">ر</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">رامي اللاذقاني</span>
+                                <span class="reviewer-project">منصة تعليمية</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box khamsat-box">
+                                <span>5</span>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">نفّذ المطلوب بدقة وأضاف لمسات إبداعية لم تكن في الطلب الأصلي. ممتاز جداً.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">ه</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">هاني السلمي</span>
+                                <span class="reviewer-project">صفحة هبوط Landing</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="platform-logo-box mostaql-box">
+                                <i class="fas fa-m"></i>
+                            </div>
+                            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">مطور موهوب ومحترم في التعامل. أنجز المشروع بجودة عالية وفي الوقت المحدد. شكراً.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="reviewer-avatar">ي</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">يوسف الحوراني</span>
+                                <span class="reviewer-project">نظام HR متكامل</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Hire CTA -->
+            <div class="hire-cta">
+                <p data-en="You can hire me for freelance work on:" data-ar="يمكنك توظيفي للعمل الحر على:">
+                    You can hire me for freelance work on:
+                </p>
+                <div class="hire-buttons">
+                    <a href="#" class="hire-btn hire-mostaql">
+                        <span class="hire-logo-box mostaql-box"><i class="fas fa-m"></i></span>
+                        <span>Mostaql / مستقل</span>
+                    </a>
+                    <a href="#" class="hire-btn hire-khamsat">
+                        <span class="hire-logo-box khamsat-box">5</span>
+                        <span>Khamsat / خمسات</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title" data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-simple">
+                <h3 class="contact-heading" data-en="Let's work together" data-ar="لنعمل معاً">Let's work together</h3>
+                <p class="contact-description" data-en="If you have a project in mind or just want to chat, feel free to reach out!" data-ar="إذا كان لديك مشروع في ذهنك أو تريد فقط الدردشة، لا تتردد في التواصل!">
+                    If you have a project in mind or just want to chat, feel free to reach out!
+                </p>
+
+                <div class="contact-methods-grid">
+                    <a href="mailto:king86370@gmail.com" class="contact-method">
+                        <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="method-info">
+                            <span class="method-label" data-en="Email" data-ar="البريد">Email</span>
+                            <span class="method-value">king86370@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+963936968795" class="contact-method">
+                        <div class="method-icon"><i class="fas fa-phone"></i></div>
+                        <div class="method-info">
+                            <span class="method-label" data-en="Phone" data-ar="الهاتف">Phone</span>
+                            <span class="method-value">+963 936 968 795</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/963936968795" class="contact-method">
+                        <div class="method-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="method-info">
+                            <span class="method-label" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+                            <span class="method-value" data-en="Chat with me" data-ar="راسلني مباشرة">Chat with me</span>
+                        </div>
+                    </a>
+                    <div class="contact-method">
+                        <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="method-info">
+                            <span class="method-label" data-en="Location" data-ar="الموقع">Location</span>
+                            <span class="method-value" data-en="Damascus, Syria" data-ar="دمشق، سوريا">Damascus, Syria</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="Threads"><i class="fab fa-threads"></i></a>
+                    <a href="#" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <a href="mailto:king86370@gmail.com" class="btn btn-primary btn-contact-cta">
+                    <span data-en="Send Me an Email" data-ar="أرسل لي بريداً إلكترونياً">Send Me an Email</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.jpg" alt="Logo" class="footer-logo">
+                    <p data-en="Building reliable backend systems with code & precision" data-ar="أبني أنظمة Backend موثوقة بالكود والدقة">
+                        Building reliable backend systems with code & precision
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                    <a href="#about" data-en="About" data-ar="عني">About</a>
+                    <a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+                    <a href="#reviews" data-en="Reviews" data-ar="التقييمات">Reviews</a>
+                    <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year"></span> Ahmed DN. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
