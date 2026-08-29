@@ -125,7 +125,7 @@
                 <button class="lang-toggle" id="langToggle" aria-label="Toggle Language">
                     <span class="lang-current">EN</span>
                     <span class="lang-divider">/</span>
-                    <span class="lang-other">عر</span>
+                    <span class="lang-other">AR</span>
                 </button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
                     <span></span><span></span><span></span>
@@ -298,25 +298,20 @@
                             <span class="window-title">developer.cs</span>
                         </div>
                         <div class="code-body">
-                            <pre>
-                                <code>
-                                    <span class="code-keyword">public class</span> <span class="code-class">Developer</span>
-                                    {
-                                        <span class="code-keyword">public string</span> Name => <span class="code-string">"Ahmed Dalwan"</span>;
-                                        <span class="code-keyword">public string</span> Role => <span class="code-string">"Backend Developer"</span>;
-                                        <span class="code-keyword">public int</span> Experience => <span class="code-number">4</span>;
-                                        
-                                        <span class="code-keyword">public</span> List&lt;<span class="code-keyword">string</span>&gt; CoreSkills => <span class="code-keyword">new</span>()
-                                        {
-                                            <span class="code-string">"ASP.NET Core / C#"</span>,
-                                            <span class="code-string">"RESTful APIs"</span>,
-                                            <span class="code-string">"SQL Server / MySQL / Oracle"</span>,
-                                            <span class="code-string">"Clean Architecture"</span>,
-                                            <span class="code-string">"Problem Solving"</span>
-                                        };
-                                    }
-                                </code>
-                            </pre>
+                            <pre><code><span class="code-keyword">public class</span> <span class="code-class">Developer</span>
+{
+    <span class="code-keyword">public string</span> Name => <span class="code-string">"Ahmed Dalwan"</span>;
+    <span class="code-keyword">public string</span> Role => <span class="code-string">"Backend Developer"</span>;
+    <span class="code-keyword">public int</span> Experience => <span class="code-number">4</span>;
+    <span class="code-keyword">public</span> List&lt;<span class="code-keyword">string</span>&gt; CoreSkills => <span class="code-keyword">new</span>()
+    {
+        <span class="code-string">"ASP.NET Core / C#"</span>,
+        <span class="code-string">"RESTful APIs"</span>,
+        <span class="code-string">"SQL Server / MySQL / Oracle"</span>,
+        <span class="code-string">"Clean Architecture"</span>,
+        <span class="code-string">"Problem Solving"</span>
+    };
+}</code></pre>
                         </div>
                     </div>
                 </div>
@@ -483,8 +478,8 @@
                     Can Build For You</h2>
                 <div class="section-line"></div>
             </div>
-            <p class="services-intro" data-en="\" Complete\" means end-to-end: I take a ready design template and
-                implement it fully — frontend, backend, and database." data-ar="كلمة \" متكامل\" تعني: أستلم قالب تصميم
+            <p class="services-intro" data-en="&quot;Complete&quot; means end-to-end: I take a ready design template and
+                implement it fully — frontend, backend, and database." data-ar="كلمة &quot;متكامل&quot; تعني: أستلم قالب تصميم
                 جاهز وأقوم بتنفيذه بالكامل — واجهة أمامية وخلفية وقاعدة بيانات.">
                 "Complete" means end-to-end delivery — frontend, backend, and database.
             </p>
@@ -654,8 +649,7 @@
 
         <div class="reviews-marquee-wrapper">
             <div class="reviews-marquee">
-                <!-- Track 1 -->
-                <div class="reviews-track">
+                <div class="reviews-track" id="reviewsTrack">
 
                     <article class="review-card">
                         <div class="review-header">
